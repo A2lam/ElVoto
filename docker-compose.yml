@@ -1,0 +1,34 @@
+web:
+  image: hitalos/laravel:latest
+  ports:
+    - 8000:80
+  volumes:
+    - ./:/var/www
+  links:
+    - db
+  environment:
+    DB_HOST: db
+    DB_DATABASE: elvoto
+    DB_USERNAME: elvoto
+    DB_PASSWORD: elvoto_pass
+    DB_CONNECTION: mysql
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  links:
+    - db:db
+  ports:
+    - 8081:80
+
+db:
+  image: mysql/mysql-server:5.7
+  restart: always
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: elvoto
+    MYSQL_USER: elvoto
+    MYSQL_PASSWORD: elvoto_pass
+  ports:
+    - 3306:3306
+  expose:
+    - 3306
