@@ -19,6 +19,7 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "bootstrap": "^4.4.1",
         "web3": "^1.2.5-rc.0"
     }
 }
