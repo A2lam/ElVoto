@@ -48,6 +48,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Démarrer une nouvelle ligue</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Voir les résultats des ligues</a>
+                        </li>
                     </ul>
                 </div>
             </div>
