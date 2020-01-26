@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/league/create', 'LeagueController@create')->name('leagues.create');
+Route::post('/league/store', 'LeagueController@store')->name('leagues.store');
+Route::get('/league/show/{leagueName}', 'LeagueController@show')->name('leagues.show');

@@ -46,7 +46,7 @@
                     <ul class="navbar-nav ml-auto">
                         @yield('menu')
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Démarrer une nouvelle ligue</a>
+                            <a class="nav-link" href="{{ route('leagues.create') }}">Démarrer une nouvelle ligue</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Voir les résultats des ligues</a>
@@ -56,7 +56,7 @@
             </div>
         </nav>
         <!-- Main content -->
-        <div class="content">
+        <div class="main-content">
             @yield('content')
         </div>
         <!-- Footer -->
