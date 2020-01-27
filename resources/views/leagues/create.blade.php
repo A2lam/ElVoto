@@ -3,7 +3,7 @@
 @section('content')
     <div class="flex-center position-ref full-height">
         <div class="content">
-            <form method="POST" action="{{ route('leagues.store') }}">
+            <form id="leagueForm" method="POST" action="{{ route('leagues.store') }}">
                 @csrf
 
                 <div class="form-group row">
@@ -23,7 +23,7 @@
 
                 <div class="form-group row mb-0 justify-content-center">
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary">
+                        <button onclick="submitLeagueName()" class="btn btn-primary">
                             Valider
                         </button>
                     </div>
@@ -31,4 +31,13 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        function submitLeagueName() {
+            initLeague();
+            $('#leagueForm').submit();
+        }
+    </script>
 @endsection

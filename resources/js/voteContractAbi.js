@@ -1,4 +1,4 @@
-[
+const voteContractAbi = [
     {
         "constant": false,
         "inputs": [
@@ -215,4 +215,4 @@
         "stateMutability": "nonpayable",
         "type": "function"
     }
-]
+];
